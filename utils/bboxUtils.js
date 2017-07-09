@@ -89,7 +89,7 @@ const bbox = (node, applyTransformations) => {
     case 'path':
       return pathUtils.bbox(node.getAttribute('d'))
     case 'use':
-      var ref = node.getAttribute('href')
+      var ref = node.getAttribute('xlink:href')
       return node.getRootNode().getElementById(ref.slice(1)).getBBox()
     case 'text':
     case 'tspan':
